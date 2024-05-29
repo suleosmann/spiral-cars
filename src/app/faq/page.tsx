@@ -1,13 +1,12 @@
-"use client"
 import React, { useState } from 'react'
 import { faqsData } from '@/data/faqsData'
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa'
 
 const Page = () => {
   const faqData = faqsData
-  const [clickedQuestion, setClickedQuestion] = useState(null)
+  const [clickedQuestion, setClickedQuestion] = useState<number | null>(null)
 
-  const handleClick = (id) => {
+  const handleClick = (id: number) => {
     setClickedQuestion(clickedQuestion === id ? null : id)
   }
 
